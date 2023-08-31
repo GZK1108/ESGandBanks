@@ -90,9 +90,9 @@ def classreg(df, banks, p):
         # 降维到95%的方差，正好2个主成分
         pca = PCA(n_components=1)
         pca.fit(x)
-        #k1_spss = pca.components_  # 成分得分系数矩阵
-        #k1=pd.DataFrame(k1_spss.T)
-        #k1.to_excel(f'k{bank}.xlsx',sheet_name='Sheet1')
+        # k1_spss = pca.components_  # 成分得分系数矩阵
+        # k1=pd.DataFrame(k1_spss.T)
+        # k1.to_excel(f'k{bank}.xlsx',sheet_name='Sheet1')
 
         # 降维后的数据
         x_new = pca.transform(x)
